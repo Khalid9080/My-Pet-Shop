@@ -1,0 +1,41 @@
+
+
+.custom-hover:hover {
+    background-color: rgba(14, 122, 129, 0.1);
+    border-radius: 5rem;
+    outline:0.09rem solid rgb(14, 122, 129);
+    
+}
+.custom-hover.clicked {
+    background-color: rgba(14, 122, 129, 0.1); /* New color after click */
+     outline: 0.1rem solid rgb(14, 122, 129);  /*Optional: slightly thicker border */
+    border-radius: 5rem;
+}
+
+.card-button{
+    outline: rgba(14, 122, 129, 0.15);
+    background: none;
+}
+
+.liked-card{
+    border: 1px solid rgba(19, 19, 19, 0.1);
+    border-radius: 1rem;
+   
+}
+
+.category-animal{
+    height: 100px;
+}
+
+.card-border{
+    border:  0.06rem solid rgba(19, 19, 19, 0.1);
+}
+
+.text-color{
+    color:rgb(14, 122, 129);
+}
+
+.bird{
+    padding: 100px 100px 100px 100px;
+    
+}

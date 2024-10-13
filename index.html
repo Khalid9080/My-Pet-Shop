@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy Website</title>
+
+    <!-- Daisy UI and Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font Awsome -->
+    <script src="https://kit.fontawesome.com/fa9695105b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav
+            class="flex flex-col md:flex-row space-y-5 md:space-y-0  justify-between items-center w-9/12 mx-auto mt-14 ">
+
+            <div class="flex flex-row gap-3 font-bold text-3xl items-center md:mr-0 mr-5">
+                <img src="Assests/images/logo.webp" alt="">
+                <div>
+                    <h1>Peddy</h1>
+                </div>
+            </div>
+
+            <div class="flex flex-row space-x-8 text-black  font-normal text-center md:mr-28 ml-4">
+                <h3>Home</h3>
+                <h3>Shop</h3>
+                <h3>Contact</h3>
+            </div>
+
+            <div class="card-border text-color  px-4 py-3 rounded-full ">
+                <i class="fa-regular fa-user "></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="mb-20">
+
+        <!-- Banner Part -->
+
+        <section class="flex flex-col items-center text-center mt-12 justify-center ">
+
+            <div class="md:w-6/12 w-auto">
+                <div class="space-y-9 md:mx-0 mx-5">
+                    <h2 class="text-xl font-semibold text-gray-500 ">Bringing Families Together ❤️‍🔥 </h2>
+                    <h1 class="md:text-7xl text-5xl font-bold  text-slate-900 leading-tight">Your Path to Adoption
+                        Starts Here</h1>
+                    <p class="text-black font-normal">Peddy Pet Shop is your one-stop destination for all pet
+                        essentials. Whether it's nutrition, care products, or fun accessories, we’ve got your pets
+                        covered with the best!</p>
+                        <div>
+                            <p><a href="#adopt-section" class="btn bg-[#0E7A81] text-white text-lg rounded-xl px-8 py-2">
+                                View More
+                            </a></p>
+                        </div>
+                    
+                </div>
+
+                <div class="mt-8">
+                    <img src="Assests/images/pet.webp" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Adoped Your Best Friend -->
+
+        <section class="space-y-11">
+            <div class="flex flex-col items-center text-center space-y-5 my-10 md:mx-0 mx-5 ">
+                <h1 id="adopt-section" class="md:text-4xl text-3xl font-bold">Adopt Your Best Friend</h1>
+                <p class="md:w-2/5">Choose your perfect pet by category and explore detailed profiles of each. Discover
+                    a variety of pets waiting for their forever home, and find your new best friend with ease.</p>
+            </div>
+
+
+            <!-- Animal Category -->
+
+            <div id="Animal-Category"
+                class="md:flex gap-x-20 md:flex-row flex flex-col space-y-10 md:space-y-0 justify-center text-center items-center my-10">
+
+            </div>
+
+            <div
+                class="flex md:flex-row flex-col justify-around md:gap-x-64 gap-x-0 items-center md:space-y-0 space-y-10">
+                <div class="text-2xl font-bold">
+                    <h1>Best Deal For You</h1>
+                </div>
+
+
+                <div><button id="sort-price" class="btn bg-[#0E7A81] text-white text-lg rounded-xl px-8 py-2 ">Sort by
+                        Price</button>
+                </div>
+            </div>
+
+
+
+
+            <!-- 
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-8 mt-8">
+       
+        <div id="Animal-Card" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 flex-1">
+           
+        </div>
+        
+        
+        <div id="Liked-Card" class="liked-card grid grid-cols-1 sm:grid-cols-2 gap-7 p-4 bg-white shadow-md rounded-lg flex-none w-full md:w-1/3">
+          
+        </div>
+    </div> 
+
+
+-->
+
+
+            <!--Animal Card -->
+            <div id="Card-Main-Container"
+                class="md:w-8/12 md:m-0 m-5 flex md:flex-row flex-col justify-between gap-5 lg:mx-80 ">
+                <!--Animal Card Body-->
+                <div id="Animal-Card" class=" grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 flex-1  ">
+
+                </div>
+
+                <!-- Liked pets will be added here -->
+                <div id="Liked-Card"
+                    class="liked-card shadow-md grid grid-cols-2 grid-flow-row auto-rows-max md:p-5 p-10  md:gap-7 gap-10 pl-10 md:pl-6  md:w-80 w-full md:flex-none flex-col">
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="">
+            <button id="showModal" class="btn hidden" onclick="AnimalDetailsModal.showModal()">open modal</button>
+            <dialog id="AnimalDetailsModal" class="modal modal-top sm:modal-middle">
+                <div class="modal-box">
+                    <div id="modal-content">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+            <button id="Adopt-Now" class="btn hidden" onclick="adoped.showModal()">open modal</button>
+            <dialog id="adoped" class="modal modal-top sm:modal-middle">
+                <div class="modal-box">
+                    <div id="congo-div">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Cencel</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+        </section>
+
+
+    </main>
+    <!-- Open the modal using ID.showModal() method -->
+
+
+    <footer class="bg-[#131313] text-white md:space-x-px space-x-0">
+
+        <div
+            class="md:flex md:flex-row flex flex-col justify-evenly space-y-8 md:space-y-0 py-20 md:space-x-48 space-x-0 md:ml-40 ml-0 ">
+
+            <div class="mb-5 ml-3 md:ml-0">
+                <div class="flex flex-row gap-3 font-bold text-3xl items-center md:ml-0 ml-8 ">
+                    <img src="Assests/images/logo.webp" alt="">
+                    <div>
+                        <h1>Peddy</h1>
+                    </div>
+                </div>
+
+                <div class="text-[#ffffffda] space-y-3 mt-10  ml-10 md:ml-0">
+                    <p>Location: av. Washington 165, NY CA</p>
+                    <p>54003</p>
+                    <p>Phone: +31 85 964 47 25</p>
+                    <p>Email: info@yourdomain.com</p>
+                    <p>Openings hours: 9.00 AM - 5.00 PM</p>
+                </div>
+
+                <div class="flex flex-row gap-5 text-3xl mt-3  ml-10 md:ml-0">
+                    <div><i class="fa-brands fa-facebook"></i></div>
+                    <div><i class="fa-brands fa-x-twitter"></i></div>
+                    <div><i class="fa-brands fa-youtube"></i></div>
+                    <div><i class="fa-brands fa-instagram"></i></div>
+                </div>
+            </div>
+
+
+            <div class="text-[#FFFFFF99] ml-40 md:ml-0 ">
+                <h1 class="text-[#ffffffda] text-xl font-bold ml-14 md:ml-0 ">Useful Links</h1>
+                <div class="mt-10 space-y-4 ml-14 md:ml-0">
+                    <p>Home</p>
+                    <p>About Us</p>
+                    <p>Animals</p>
+                    <p>Foundation</p>
+                    <p>Contact</p>
+                </div>
+
+
+            </div>
+
+            <div class=" ml-8 md:ml-0">
+                <h1 class="text-xl font-bold ml-14 md:ml-0">Drop a Massage</h1>
+                <div class="space-y-4 mt-10 ml-14 md:ml-0 ">
+                    <input type="text" placeholder="Enter You Email"
+                        class="input text-base bg-[#FFFFFF0D] text-[#FFFFFF99] input-md input-bordered w-full max-w-64" />
+                    <button class="btn border-0 btn-wide text-white text-xl bg-[#0E7A81]">Subscribe</button>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="Assests/JS/main.js"></script>
+</body>
+
+</html>
